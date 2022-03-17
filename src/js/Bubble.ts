@@ -40,10 +40,16 @@ export class Bubble{
     }
     update(){
         if (this.position.y <= -this.radius){
-
+            this.position.y = this.canvas.height + this.radius;
+        }
+        const hypothenuse = Math.sqrt(Math.pow(this.position.x - this.mouse.x, 2) + Math.pow(this.position.y - this.mouse.y, 2));
+        if (hypothenuse <= this.radius + settings.mouse.radius){
+            this.color = 'blue';
+        }else {
+            this.color = 'red';
         }
         this.position.y -= this.speed.y;
-        this.position.x += this.speed.x;
+        // this.position.x += this.speed.x;
         this.draw();
     }
 }

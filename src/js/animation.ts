@@ -1,4 +1,3 @@
-import {canvas} from "./canvas";
 import {Bubble} from "./Bubble";
 
 export const animation = {

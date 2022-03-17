@@ -15,7 +15,7 @@ const app ={
   },
   loadBubbles(){
       for (let i = 0; i < settings.bubble.maxCount; i++){
-          this.bubbles.push(new Bubble(this.ctx,this.canvas,this.mouse));
+          this.bubbles.push(new Bubble(this.ctx,this.canvasElement,this.mouse));
       }
   }
 };
